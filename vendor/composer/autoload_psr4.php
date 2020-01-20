@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Swagger\\Client\\' => array($vendorDir . '/cloudmersive/cloudmersive_validate_api_client/lib', $vendorDir . '/cloudmersive/cloudmersive_virusscan_api_client/lib'),
+    'Swagger\\Client\\' => array($vendorDir . '/cloudmersive/cloudmersive_ocr_api_client/lib', $vendorDir . '/cloudmersive/cloudmersive_validate_api_client/lib', $vendorDir . '/cloudmersive/cloudmersive_virusscan_api_client/lib'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'JmesPath\\' => array($vendorDir . '/mtdowling/jmespath.php/src'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),

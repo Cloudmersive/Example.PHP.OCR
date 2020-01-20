@@ -18,51 +18,21 @@ $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Ap
 
 
 
-$apiInstance = new Swagger\Client\Api\ScanApi(
+$apiInstance = new Swagger\Client\Api\ImageOcrApi(
     new GuzzleHttp\Client(  array('verify'          => false)  ),
     $config
 );
 $input_file = $temp_file_location; // \SplFileObject | Input file to perform the operation on.
 
-$result = $apiInstance->scanFile($input_file);
+$recognition_mode = "Advanced";
+$language = "ENG";
+$preprocessing = "Auto";
 
-if (! $result->getCleanResult())
-{
-    throw new Exception('File contains viruses!');
-}
-
-file_put_contents("php://output", "File is clean and safe to upload, proceeding to upload");
-
-// Step 2 - Upload to S3
+$result = $apiInstance->imageOcrPost($input_file, $recognition_mode, $language, $preprocessing);
 
 
-try
-{
 
-		// require 'vendor/autoload.php';
-
-		$s3 = new Aws\S3\S3Client([
-			'region'  => '-- your region --',
-			'version' => 'latest',
-			'credentials' => [
-				'key'    => "-- access key id --",
-				'secret' => "-- secret access key --",
-			]
-		]);		
-
-		$result = $s3->putObject([
-			'Bucket' => '-- bucket name --',
-			'Key'    => $file_name,
-			'SourceFile' => $temp_file_location			
-		]);
-
-		var_dump($result);
-}
-catch (Exception $e)
-{
-    
-}
-
+file_put_contents("php://output", $result);
 }
 ?>
 

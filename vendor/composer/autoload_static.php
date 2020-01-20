@@ -43,8 +43,9 @@ class ComposerStaticInit50216ce4c51935ba5e39a6dfa8a0e8b9
     public static $prefixDirsPsr4 = array (
         'Swagger\\Client\\' => 
         array (
-            0 => __DIR__ . '/..' . '/cloudmersive/cloudmersive_validate_api_client/lib',
-            1 => __DIR__ . '/..' . '/cloudmersive/cloudmersive_virusscan_api_client/lib',
+            0 => __DIR__ . '/..' . '/cloudmersive/cloudmersive_ocr_api_client/lib',
+            1 => __DIR__ . '/..' . '/cloudmersive/cloudmersive_validate_api_client/lib',
+            2 => __DIR__ . '/..' . '/cloudmersive/cloudmersive_virusscan_api_client/lib',
         ),
         'Psr\\Http\\Message\\' => 
         array (
