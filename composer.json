@@ -1,5 +1,5 @@
 {
     "require": {
-        "cloudmersive/cloudmersive_ocr_api_client": "3.0.2"
+        "cloudmersive/cloudmersive_ocr_api_client": "3.0.3"
     }
 }

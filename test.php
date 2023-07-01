@@ -1,10 +1,10 @@
 <?php
 
-$contents = file_get_contents('test.jpg');
+//$contents = file_get_contents('test.jpg');
 
 
-$file_name = $contents;   
-$temp_file_location = $contents; 
+$file_name = 'C:\\temp\\test.jpg';   
+$temp_file_location = 'C:\\temp\\test.jpg'; 
 
 
 
@@ -14,7 +14,7 @@ $temp_file_location = $contents;
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: Apikey
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Apikey', 'API-KEY-HERE');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Apikey', 'b5506287-f303-4cf5-853c-712afe75291f');
 
 
 
